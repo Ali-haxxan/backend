@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const cors = require("cors");
 const cookieSession = require("cookie-session");
@@ -6,7 +7,6 @@ const bodyParser = require('body-parser');
 const connectDB = require("./config/db.config");
 const seedData = require('./seeders/seed_activities');
 const { default: mongoose } = require('mongoose');
-require('dotenv').config()
 connectDB();
 
 var corsOptions = {
